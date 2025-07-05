@@ -1,0 +1,112 @@
+:root{
+    --body-ff: Quicksand, sans-serif;
+    --heading-ff: Blinker; 
+    --body-background-dm: #000;
+    --body-background-lm: #fff;
+    --main-dm-fcolor: #fff;
+    --main-lm-fcolor: #000;
+    --fontSizes-3xs: 0.45rem;
+    --fontSizes-2xs: 0.62rem;
+    --fontSizes-xs: 0.75rem;
+    --fontSizes-s: 0.875rem;
+    --fontSizes-m: 1rem;
+    --fontSizes-l: 1.25rem;
+    --fontSizes-xl: 1.50rem;
+    --fontSizes-2xl: 1.75rem;
+    --fontSizes-3xl: 1.87rem;
+    --fontSizes-4xl: 2.25rem;
+    --fontSizes-5xl: 2.50rem;
+    --fontSizes-6xl: 2.75rem;
+    --fontSizes-7xl: 2.87rem;
+    --fontSizes-8xl: 3rem;
+    --fontWeight-hairline: 100;
+    --fontWeight-thin: 200;
+    --fontWeight-light: 300;
+    --fontWeight-medium: 400;
+    --fontWeight-normal: 500;
+    --fontWeight-semibold: 600;
+    --fontWeight-bold: 700;
+    --fontWeight-extrabold: 800;
+    --fontWeight-arnold: 900;
+    --letterSpacing-tight: -0.05rem;
+    --letterSpacing-normal: 0;
+    --letterSpacing-wide: 0.2rem;
+    --lineHeight-none: 1;
+    --lineHeight-short: 1.25rem;
+    --lineHeight-normal: normal;
+    --lineHeight-tall: 1.50rem;
+    --lineHeight-taller: 2rem;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: var(--body-ff);
+}
+
+body{
+    background: var(--body-background-dm);
+}
+
+/***** HEADER *****/
+.header{
+    font-family: var(--heading-ff);
+    font-size: var(--fontSizes-l);
+    font-weight: var(--fontWeight-normal);
+    letter-spacing: var(--letterSpacing-wide);
+}
+
+#navbar{
+    max-width: 75rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 30px 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+#navbar a{
+    color: var(--main-dm-fcolor);
+}
+
+.nav-text ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-text li{
+    margin-left: 30px;
+}
+
+.nav-options{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.nav-title a,
+.nav-text a,
+.nav-lang a{
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+
+.nav-btn{
+    color: var(--body-background-lm);
+    font-size: var(--fontSizes-xl);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
