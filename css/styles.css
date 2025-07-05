@@ -1,14 +1,21 @@
 :root{
     --body-ff: Quicksand, sans-serif;
     --heading-ff: Blinker; 
-    --body-background-dm: #000;
-    --body-background-lm: #fff;
-    --main-dm-fcolor: #fff;
-    --main-lm-fcolor: #000;
+    --body-background: hsl(0, 0%, 7%);
+    --main-fcolor: hsl(0, 0%, 100%);
+    --navbar-border-bottom: linear-gradient(
+    to right, 
+    #456882 0%,
+    #578FCA 100%);
+    --main-half-background: linear-gradient(
+    to top, 
+    #456882 50%,
+    transparent 50%);
+    --footer-fcolor: #578FCA;
     --fontSizes-3xs: 0.45rem;
     --fontSizes-2xs: 0.62rem;
     --fontSizes-xs: 0.75rem;
-    --fontSizes-s: 0.875rem;
+    --fontSizes-s: 0.87rem;
     --fontSizes-m: 1rem;
     --fontSizes-l: 1.25rem;
     --fontSizes-xl: 1.50rem;
@@ -32,11 +39,24 @@
     --letterSpacing-normal: 0;
     --letterSpacing-wide: 0.2rem;
     --lineHeight-none: 1;
-    --lineHeight-short: 1.25rem;
+    --lineHeight-short: 1.25em;
     --lineHeight-normal: normal;
-    --lineHeight-tall: 1.50rem;
-    --lineHeight-taller: 2rem;
+    --lineHeight-tall: 1.50em;
+    --lineHeight-taller: 2em;
+}
 
+.lightmode{
+    --body-background: hsl(0, 0%, 100%);
+    --main-fcolor: hsl(0, 0%, 7%);
+    --navbar-border-bottom: linear-gradient(
+    to right, 
+    #EA2F14 0%,
+    #FB9E3A 100%);
+    --main-half-background: linear-gradient(
+    to top, 
+    #FB9E3A 50%,
+    transparent 50%);
+    --footer-fcolor: #EA2F14;
 }
 
 *{
@@ -46,11 +66,19 @@
 }
 
 html{
-    font-family: var(--body-ff);
+    scroll-behavior: smooth;
 }
 
 body{
-    background: var(--body-background-dm);
+    background: var(--body-background);
+    font-family: var(--body-ff);
+}
+
+.site{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
 }
 
 /***** HEADER *****/
@@ -67,16 +95,15 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 0;
     padding: 30px 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: 1000;
+    position: sticky;
+    z-index: 999;
 }
 
 #navbar a{
-    color: var(--main-dm-fcolor);
+    color: var(--main-fcolor);
 }
 
 .nav-text ul{
@@ -86,6 +113,7 @@ body{
 
 .nav-text li{
     margin-left: 30px;
+    list-style: none;
 }
 
 .nav-options{
@@ -96,17 +124,140 @@ body{
 
 .nav-title a,
 .nav-text a,
-.nav-lang a{
+.nav-lang a {
+    position: relative;
     text-decoration: none;
-    list-style: none;
     cursor: pointer;
 }
 
+.nav-text a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0; 
+    bottom: -5px;
+    right: 0; 
+    height: 3px;
+    background: var(--navbar-border-bottom);
+    width: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.nav-text a:hover::after{
+    width: 100%;
+}
+
+.nav-lang a:last-child{
+    display: none;
+}
 
 .nav-btn{
-    color: var(--body-background-lm);
     font-size: var(--fontSizes-xl);
     background: none;
     border: none;
     cursor: pointer;
+    transition: 0.15s;
+}
+
+.nav-btn:hover{
+    transform: scale(1.17);
+}
+
+.nav-btn svg{
+    fill: var(--main-fcolor)
+}
+
+.nav-btn svg:last-child{
+    display: none;
+}
+
+.lightmode .nav-btn svg:first-child{
+    display: none;
+}
+
+.lightmode .nav-btn svg:last-child{
+    display: block;
+}
+/* */
+
+
+
+/***** START - SECTION *****/
+#start{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-fcolor);
+}
+
+.main-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+    line-height: var(--lineHeight-tall);
+    font-size: var(--fontSizes-4xl);
+}
+
+.next-section-port a{
+    color: var(--main-fcolor);
+    text-decoration: none;
+    font-weight: var(--fontWeight-semibold);
+    background: var(--main-half-background);
+    font-size: var(--fontSizes-xl);
+}
+/* */
+
+
+
+/***** PROJECTS - SECTION *****/
+#projects{
+    width: 100%;
+    min-height: 100vh;
+}
+/* */
+
+
+
+/***** ABOUT ME - SECTION *****/
+#about{
+    width: 100%;
+    min-height: 100vh;
+}
+/* */
+
+
+
+/***** CONTACTS - SECTION *****/
+#contacts{
+    width: 100%;
+    min-height: 100vh;
+}
+/* */
+
+
+
+/***** FOOTER *****/
+.footer-text{
+    margin-top: 20px;
+    padding: 15px 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: var(--fontWeight-medium);
+    font-size: var(--fontSizes-s);
+    color: var(--main-fcolor);
+}
+
+.footer-text a{
+    color: var(--main-fcolor);
+}
+
+.footer-text a:hover,
+.footer-text a:active{
+    color: var(--footer-fcolor);
 }
