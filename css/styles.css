@@ -58,7 +58,7 @@
     --lineHeight-taller: 2em;
     --email-icon-color: rgb(226, 80, 75);
     --email-icon-color-hover: rgb(199, 22, 16);
-    --linkedin-icon-color: rgb(255, 255, 153);
+    --linkedin-icon-color: rgb(231, 231, 122);
     --linkedin-icon-color-hover: rgb(202, 202, 95);
     --facebook-icon-color: rgb(71, 140, 230);
     --facebook-icon-color-hover: rgb(24, 119, 242);
@@ -92,7 +92,7 @@
     --email-icon-color: rgb(199, 22, 16); 
     --email-icon-color-hover: rgb(226, 80, 75);
     --linkedin-icon-color: rgb(202, 202, 95);
-    --linkedin-icon-color-hover: rgb(255, 255, 153);
+    --linkedin-icon-color-hover: rgb(231, 231, 122);
     --facebook-icon-color: rgb(24, 119, 242);
     --facebook-icon-color-hover: rgb(71, 140, 230);
     --instagram-icon-color: rgb(238, 130, 238);
@@ -254,6 +254,23 @@ body{
     border-bottom: 3px solid var(--section-border-color);
 }
 
+.main-container{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+
+.author-img{ /* 351px x 482px */
+    border: 5px solid var(--main-fcolor);
+    border-radius: 25px;
+    overflow: hidden;
+    animation: shadowMove 4s linear infinite;
+}
+
+@keyframes shadowMove{
+    50% {box-shadow: 10px 20px 1px var(--footer-fcolor);}
+}
+
 .main-heading{
     display: flex;
     flex-direction: column;
@@ -395,10 +412,6 @@ body{
 
 .instagram a{
     color: var(--instagram-icon-color);
-    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text; */
 }
 
 .instagram a:hover,
