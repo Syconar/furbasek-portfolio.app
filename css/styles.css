@@ -56,11 +56,22 @@
     --lineHeight-normal: normal;
     --lineHeight-tall: 1.50em;
     --lineHeight-taller: 2em;
+    --email-icon-color: rgb(226, 80, 75);
+    --email-icon-color-hover: rgb(199, 22, 16);
+    --linkedin-icon-color: rgb(255, 255, 153);
+    --linkedin-icon-color-hover: rgb(202, 202, 95);
+    --facebook-icon-color: rgb(71, 140, 230);
+    --facebook-icon-color-hover: rgb(24, 119, 242);
+    --instagram-icon-color: rgb(241, 172, 241);
+    --instagram-icon-color-hover: rgb(238, 130, 238);
+    --github-icon-color: rgb(116, 194, 134);
+    --github-icon-color-hover: rgb(45, 186, 78);
 }
 
 .lightmode{
     --body-background: hsl(0, 0%, 100%);
     --main-fcolor: hsl(0, 0%, 7%);
+    --secondary-fcolor: hsl(206, 41%, 23%);
     --navbar-border-bottom: linear-gradient(
     to right, 
     #EA2F14 0%,
@@ -77,8 +88,17 @@
     to top, 
     #FB9E3A 50%,
     transparent 50%);
-    
     --footer-fcolor: #EA2F14;
+    --email-icon-color: rgb(199, 22, 16); 
+    --email-icon-color-hover: rgb(226, 80, 75);
+    --linkedin-icon-color: rgb(202, 202, 95);
+    --linkedin-icon-color-hover: rgb(255, 255, 153);
+    --facebook-icon-color: rgb(24, 119, 242);
+    --facebook-icon-color-hover: rgb(71, 140, 230);
+    --instagram-icon-color: rgb(238, 130, 238);
+    --instagram-icon-color-hover: rgb(241, 172, 241);
+    --github-icon-color: rgb(45, 186, 78);
+    --github-icon-color-hover: rgb(116, 194, 134);
 }
 
 *{
@@ -286,7 +306,7 @@ body{
     align-items: center;
 }
 
-.contact-info{
+.contact-main-heading{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -294,7 +314,8 @@ body{
     font-family: var(--heading-ff);
     letter-spacing: var(--letterSpacing-wide);
     font-size: var(--fontSizes-2xl);
-    word-spacing: 0.25rem;
+    cursor: default;
+    margin-bottom: 4em;
 }
 
 .contact-heading{
@@ -304,6 +325,12 @@ body{
     align-items: center;
     text-align: center;
     line-height: var(--lineHeight-tall);
+}
+
+.heading-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2em;
 }
 
 .contact-heading h1{
@@ -317,10 +344,80 @@ body{
     text-align: center;
 }
 
-.heading-container {
+.contact-info{
+    max-width: 1000px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 0.2em;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: var(--secondary-fcolor);
+    font-family: var(--heading-ff);
+    letter-spacing: var(--letterSpacing-wide);
+    font-size: var(--fontSizes-2xl);
+    word-spacing: 0.25rem;
+    cursor: default;
+}
+
+.contact-media{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    gap: 0.60vw;
+}
+
+.email{
+    color: var(--email-icon-color);
+}
+
+.email:hover,
+.email:active{
+    color: var(--email-icon-color-hover);
+}
+
+.linkedin{
+    color: var(--linkedin-icon-color);
+}
+
+.linkedin:hover,
+.linkedin:active{
+    color: var(--linkedin-icon-color-hover);
+}
+
+.facebook{
+    color: var(--facebook-icon-color);
+}
+
+.facebook:hover,
+.facebook:active{
+    color: var(--facebook-icon-color-hover);
+}
+
+.instagram{
+    color: var(--instagram-icon-color);
+    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; */
+}
+
+.instagram:hover,
+.instagram:active{
+    color: var(--instagram-icon-color-hover);
+}
+
+.github{
+    color: var(--github-icon-color);
+}
+
+.github:hover,
+.github:active{
+    color: var(--github-icon-color-hover);
+}
+
+
+.contact-media i{
+    cursor: pointer;
 }
 /* */
 
