@@ -366,34 +366,34 @@ body{
     gap: 0.60vw;
 }
 
-.email{
+.email a{
     color: var(--email-icon-color);
 }
 
-.email:hover,
-.email:active{
+.email a:hover,
+.email a:active{
     color: var(--email-icon-color-hover);
 }
 
-.linkedin{
+.linkedin a{
     color: var(--linkedin-icon-color);
 }
 
-.linkedin:hover,
-.linkedin:active{
+.linkedin a:hover,
+.linkedin a:active{
     color: var(--linkedin-icon-color-hover);
 }
 
-.facebook{
+.facebook a{
     color: var(--facebook-icon-color);
 }
 
-.facebook:hover,
-.facebook:active{
+.facebook a:hover,
+.facebook a:active{
     color: var(--facebook-icon-color-hover);
 }
 
-.instagram{
+.instagram a{
     color: var(--instagram-icon-color);
     /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     color: transparent;
@@ -401,17 +401,17 @@ body{
     -webkit-background-clip: text; */
 }
 
-.instagram:hover,
-.instagram:active{
+.instagram a:hover,
+.instagram a:active{
     color: var(--instagram-icon-color-hover);
 }
 
-.github{
+.github a{
     color: var(--github-icon-color);
 }
 
-.github:hover,
-.github:active{
+.github a:hover,
+.github a:active{
     color: var(--github-icon-color-hover);
 }
 
