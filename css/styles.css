@@ -2,15 +2,25 @@
     --body-ff: Quicksand, sans-serif;
     --heading-ff: Blinker; 
     --body-background: hsl(0, 0%, 7%);
+    --left-halfpart-background: linear-gradient(
+        155deg,
+        hsl(0, 0%, 7%) 50%,
+        transparent 50%);
+    --right-halfpart-background: linear-gradient(
+        155deg,
+        transparent 50%,
+        hsl(0, 0%, 7%) 50%);
+    --url-background: url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="30,0 60,60 0,60" stroke="rgb(23, 23, 23)" stroke-width="2" fill="none"/><polygon points="0,0 60,0 30,60" stroke="rgb(23, 23, 23)" stroke-width="2" fill="none"/></svg>');
     --main-fcolor: hsl(0, 0%, 100%);
+    --secondary-fcolor: rgb(228, 222, 215);
     --navbar-border-bottom: linear-gradient(
-    to right, 
-    #456882 0%,
-    #578FCA 100%);
+        to right, 
+        #456882 0%,
+        #578FCA 100%);
     --main-half-background: linear-gradient(
-    to top, 
-    #456882 50%,
-    transparent 50%);
+        to top, 
+        #456882 50%,
+        transparent 50%);
     --footer-fcolor: #578FCA;
     --fontSizes-3xs: 0.45rem;
     --fontSizes-2xs: 0.62rem;
@@ -52,6 +62,15 @@
     to right, 
     #EA2F14 0%,
     #FB9E3A 100%);
+    --left-halfpart-background: linear-gradient(
+        155deg,
+        hsl(0, 0%, 100%) 50%,
+        transparent 50%);
+    --right-halfpart-background: linear-gradient(
+        155deg,
+        transparent 50%,
+        hsl(0, 0%, 100%) 50%);
+    --url-background: url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="30,0 60,60 0,60" stroke="rgba(50, 50, 50, 0.05)" stroke-width="2" fill="none"/><polygon points="0,0 60,0 30,60" stroke="rgba(50, 50, 50, 0.05)" stroke-width="2" fill="none"/></svg>');
     --main-half-background: linear-gradient(
     to top, 
     #FB9E3A 50%,
@@ -70,7 +89,7 @@ html{
 }
 
 body{
-    background: var(--body-background);
+    background:var(--body-background);
     font-family: var(--body-ff);
 }
 
@@ -79,6 +98,7 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: minmax(0, 1fr);
+    background: var(--url-background);
 }
 
 /***** HEADER *****/
@@ -199,6 +219,7 @@ body{
     justify-content: center;
     align-items: center;
     color: var(--main-fcolor);
+    background: var(--left-halfpart-background);
     cursor: default;
 }
 
@@ -227,6 +248,7 @@ body{
 #projects{
     width: 100%;
     min-height: 100vh;
+    background: var(--right-halfpart-background);
 }
 /* */
 
@@ -236,6 +258,7 @@ body{
 #about{
     width: 100%;
     min-height: 100vh;
+    background: var(--body-background);
 }
 /* */
 
@@ -245,6 +268,11 @@ body{
 #contacts{
     width: 100%;
     min-height: 100vh;
+    background: var(--body-background);
+}
+
+.contact-heading h1{
+    color: var(--secondary-fcolor);
 }
 /* */
 
@@ -259,6 +287,7 @@ body{
     font-weight: var(--fontWeight-medium);
     font-size: var(--fontSizes-s);
     color: var(--main-fcolor);
+    background: var(--body-background);
 }
 
 .footer-text a{
