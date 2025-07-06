@@ -48,7 +48,9 @@
     --fontWeight-arnold: 900;
     --letterSpacing-tight: -0.05rem;
     --letterSpacing-normal: 0;
-    --letterSpacing-wide: 0.2rem;
+    --letterSpacing-wide: 0.1rem;
+    --letterSpacing-wider: 0.2rem;
+    --letterSpacing-widest: 0.6rem;
     --lineHeight-none: 1;
     --lineHeight-short: 1.25em;
     --lineHeight-normal: normal;
@@ -268,20 +270,57 @@ body{
     width: 100%;
     min-height: 100vh;
     background: var(--body-background);
+    border-bottom: 3px solid var(--section-border-color);;
 }
 /* */
 
 
 
 /***** CONTACTS - SECTION *****/
-#contacts{
+#contact{
     width: 100%;
     min-height: 100vh;
-    background: var(--body-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--secondary-fcolor);
+    font-family: var(--heading-ff);
+    letter-spacing: var(--letterSpacing-wide);
+    font-size: var(--fontSizes-2xl);
+    word-spacing: 0.25rem;
+}
+
+.contact-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: var(--lineHeight-tall);
 }
 
 .contact-heading h1{
-    color: var(--secondary-fcolor);
+    letter-spacing: var(--letterSpacing-wider);
+    font-size: 200px;
+    font-weight: var(--fontWeight-arnold);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2em;
 }
 /* */
 
@@ -292,11 +331,15 @@ body{
     margin-top: 20px;
     padding: 15px 0;
     text-align: center;
-    font-style: italic;
     font-weight: var(--fontWeight-medium);
     font-size: var(--fontSizes-s);
     color: var(--main-fcolor);
     background: var(--body-background);
+    border-top: 3px solid var(--section-border-color);;
+}
+
+.footer-text p{
+    margin-top: 7px;
 }
 
 .footer-text a{

@@ -29,11 +29,20 @@ document.addEventListener("mousemove", (e) => {
     mouseY = e.pageY + 10;
 });
 
+// Update target position on touch move
+document.addEventListener("touchmove", (e) => {
+    if (e.touches && e.touches.length > 0) {
+        mouseX = e.touches[0].pageX + 10;
+        mouseY = e.touches[0].pageY + 10;
+    }
+}, {passive: false});
+
+
 // Animation loop for smooth movement
 function animate() {
-    // Lerp: move 15% closer to the target each frame
-    gifX += (mouseX - gifX) * 0.035;
-    gifY += (mouseY - gifY) * 0.035;
+    // Lerp: move 0.35% closer to the target each frame
+    gifX += (mouseX - gifX) * 0.035; 
+    gifY += (mouseY - gifY) * 0.035; // lower number = smoother and bigger "lag", bigger number = more fixed movement
     monkeyGif.style.left = gifX + "px";
     monkeyGif.style.top = gifY + "px";
     requestAnimationFrame(animate);
