@@ -13,6 +13,7 @@
     --main-fcolor: hsl(0, 0%, 100%);
     --secondary-fcolor: rgb(228, 222, 215);
     --tertiary-fcolor: rgb(190, 177, 161);
+    --quaternary-fcolor: hsl(0, 0%, 62%);
     --navbar-border-bottom: linear-gradient(
         to right, 
         #456882 0%,
@@ -23,6 +24,7 @@
         #456882 50%,
         transparent 50%
         );
+    --projects-background: hsl(0, 0%, 12%);
     --footer-fcolor: #578FCA;
     --fontSizes-3xs: 0.45rem;
     --fontSizes-2xs: 0.62rem;
@@ -299,7 +301,33 @@ body{
 #projects{
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--body-background);
+}
+
+.all-projects-container{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    max-width: 1200px;
+    margin-top: 7em;
+    margin-bottom: 50px;
+}
+
+.personal-project-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: var(--projects-background);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.project-info p{
+    color: var(--quaternary-fcolor);
 }
 /* */
 
