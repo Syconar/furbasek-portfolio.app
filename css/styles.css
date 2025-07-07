@@ -12,6 +12,7 @@
     --section-border-color: hsl(0, 0%, 100%); 
     --main-fcolor: hsl(0, 0%, 100%);
     --secondary-fcolor: rgb(228, 222, 215);
+    --tertiary-fcolor: rgb(190, 177, 161);
     --navbar-border-bottom: linear-gradient(
         to right, 
         #456882 0%,
@@ -72,6 +73,7 @@
     --body-background: hsl(0, 0%, 100%);
     --main-fcolor: hsl(0, 0%, 7%);
     --secondary-fcolor: hsl(206, 41%, 23%);
+    --tertiary-fcolor: hsl(208, 100%, 8%);
     --navbar-border-bottom: linear-gradient(
     to right, 
     #EA2F14 0%,
@@ -115,6 +117,7 @@ html{
 body{
     background:var(--body-background);
     font-family: var(--body-ff);
+    color: var(--main-fcolor);
 }
 
 .site{
@@ -306,8 +309,78 @@ body{
 #about{
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--body-background);
-    border-bottom: 3px solid var(--section-border-color);;
+    border-bottom: 3px solid var(--section-border-color);
+}
+
+.inside-info-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1212px;
+    color: var(--secondary-fcolor);
+    margin: 50px 0;
+}
+
+.about-heading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-fcolor);
+    font-family: var(--heading-ff);
+    letter-spacing: var(--letterSpacing-wide);
+    font-size: var(--fontSizes-2xl);
+    margin-bottom: 2em;
+    font-size: var(--fontSizes-5xl);
+}
+
+.about-paragraphs{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.rightsideparagraph{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: var(--fontSizes-2xl);
+    font-weight: var(--fontWeight-normal);
+    gap: 1.5rem;
+}
+
+.leftsideparagraph{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    text-align: start;
+    font-size: var(--fontSizes-l);
+    color: var(--tertiary-fcolor);
+}
+
+.myTools{
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 30px;
+}
+
+.questionsAndAnswers{
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.pQuestion{
+    font-weight: var(--fontWeight-normal);
+    color: var(--secondary-fcolor);
 }
 /* */
 
