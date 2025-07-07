@@ -24,7 +24,7 @@
         #456882 50%,
         transparent 50%
         );
-    --projects-background: hsl(0, 0%, 12%);
+    --projects-background: hsl(228, 10%, 10%);
     --footer-fcolor: #578FCA;
     --fontSizes-3xs: 0.45rem;
     --fontSizes-2xs: 0.62rem;
@@ -320,14 +320,98 @@ body{
 .personal-project-container{
     display: flex;
     flex-direction: row;
+    position: relative;
     width: 100%;
     background: var(--projects-background);
     border-radius: 25px;
     overflow: hidden;
+    border: 1px solid #ffffff23;
+    box-shadow: 0 -20px 80px -20px #ffffff1f inset;
+}
+
+.justify-content\:space-between{
+    justify-content: space-between;
+}
+
+.personal-project-container img{
+    width: 600px;
+}
+
+.project-links{
+    display: flex;
+    flex-direction: row;
+    width: 0;
+    height: 30px;
+    position: absolute;
+    gap: 1.3rem;
+}
+
+.left-3{
+    left: 3rem;
+}
+
+.right-8{
+    right: 8rem;
+}
+
+.top-5{
+    top: -5px;
+}
+
+.mt-3{
+    margin-top: 3rem;
+}
+
+.mr-3{
+    margin-right: 3rem;
+}
+
+.ml-3{
+    margin-left: 3rem;
+}
+
+
+
+.project-links a{
+    color: var(--main-fcolor);
+    text-decoration: none;
+}
+
+.project-links i{
+    display: block;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.align-items\:start{
+    align-items: start;
+}
+
+.project-info h2{
+    font-size: var(--fontSizes-3xl);
 }
 
 .project-info p{
     color: var(--quaternary-fcolor);
+}
+
+.project-programs{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5rem;
+    gap: 1rem;
+}
+
+.project-programs h2{
+    font-size: var(--fontSizes-l);
+    padding: 10px 15px;
+    border: 1px solid #403b52;
+    border-radius: 10px;
 }
 /* */
 
@@ -410,6 +494,7 @@ body{
     font-weight: var(--fontWeight-normal);
     color: var(--secondary-fcolor);
 }
+
 /* */
 
 
