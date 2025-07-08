@@ -412,6 +412,7 @@ body{
 
 .project-info p{
     color: var(--quaternary-fcolor);
+    margin-right: 30px;
 }
 
 .project-programs{
