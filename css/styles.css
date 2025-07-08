@@ -73,9 +73,6 @@
 
 .lightmode{
     --body-background: hsl(0, 0%, 100%);
-    --main-fcolor: hsl(0, 0%, 7%);
-    --secondary-fcolor: hsl(206, 41%, 23%);
-    --tertiary-fcolor: hsl(208, 100%, 8%);
     --navbar-border-bottom: linear-gradient(
     to right, 
     #EA2F14 0%,
@@ -103,6 +100,16 @@
     --instagram-icon-color-hover: rgb(241, 172, 241);
     --github-icon-color: rgb(45, 186, 78);
     --github-icon-color-hover: rgb(116, 194, 134);
+}
+
+.lightmode > *:not(#projects){
+    --main-fcolor: hsl(0, 0%, 7%);
+    --secondary-fcolor: hsl(206, 41%, 23%);
+    --tertiary-fcolor: hsl(208, 100%, 8%);
+}
+
+.lightmode .media-link-white{
+    --main-fcolor: hsl(0, 0%, 100%);
 }
 
 *{
@@ -372,7 +379,7 @@ body{
 
 
 
-.project-links a{
+.media-link-white{
     color: var(--main-fcolor);
     text-decoration: none;
 }
@@ -553,6 +560,11 @@ body{
     transform: translateY(120%);
 }
 
+.contact-heading-part span.firstactive{
+    transform: translateY(0%);
+    transition: 0.4s ease-out;
+}
+
 .contact-heading-part span{
     display: flex;
     line-height: 16vh;
@@ -561,7 +573,7 @@ body{
 
 .contact-heading-part span.active{
     transform: translateY(0%);
-    transition: 0.4s ease-out;
+    transition: 0.8s ease-out;
 }
 
 .contact-info{
