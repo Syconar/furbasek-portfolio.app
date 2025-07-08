@@ -324,6 +324,12 @@ body{
     margin-bottom: 50px;
 }
 
+.unfocused-fog{
+    filter: blur(3px) brightness(80%);
+    transform: scale(0.95);
+    cursor: default;
+}
+
 .personal-project-container{
     display: flex;
     flex-direction: row;
@@ -334,6 +340,7 @@ body{
     overflow: hidden;
     border: 1px solid #ffffff23;
     box-shadow: 0 -20px 80px -20px #ffffff1f inset;
+    transition: 0.28s;
 }
 
 .justify-content\:space-between{
