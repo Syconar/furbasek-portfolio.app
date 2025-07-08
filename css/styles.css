@@ -550,13 +550,13 @@ body{
 }
 
 .contact-heading-part span.first{
-    transform: translateY(100%);
+    transform: translateY(120%);
 }
 
 .contact-heading-part span{
     display: flex;
     line-height: 16vh;
-    transform: translateY(175%);
+    transform: translateY(220%);
 }
 
 .contact-heading-part span.active{
@@ -577,6 +577,24 @@ body{
     font-size: var(--fontSizes-2xl);
     word-spacing: 0.25rem;
     cursor: default;
+}
+
+.media-text{
+    display: flex;
+    overflow: hidden;
+    height: 6vh;
+}
+
+.media-text span{
+    display: flex;
+    height: 6vh;
+    transform: translateY(100%);
+}
+
+.media-text span.active{
+    display: flex;
+    transform: translateY(0%);
+    transition: 0.4s ease-out;
 }
 
 .contact-media{

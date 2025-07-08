@@ -13,10 +13,12 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY
 });
 
+// Contact title and social media sliding up on scroll
 let contactMainHeading = document.querySelectorAll(".contact-heading-part");
+let contactMediaText = document.querySelectorAll(".media-text");
 
 let options = {
-    rootMargin: "-10%",
+    rootMargin: "-7%", //The transition will apply when the item come to the view point at 7%
     threshold: 0.0
 };
 
@@ -24,7 +26,7 @@ let observer = new IntersectionObserver(showItem, options);
 
 function showItem(entries){
     entries.forEach(entry => {
-        if(entry.isIntersecting){
+        if(entry.isIntersecting){ // If the title is visible on scroll, add "active" class to the div
             entry.target.children[0].classList.add("active")
         }
     });
@@ -32,4 +34,8 @@ function showItem(entries){
 
 contactMainHeading.forEach(item => {
     observer.observe(item)
-})
+});
+
+contactMediaText.forEach(item => {
+    observer.observe(item)
+});
