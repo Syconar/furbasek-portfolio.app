@@ -15,13 +15,21 @@ window.addEventListener("scroll", () => {
 
 
 
-// Focus to project item when scrollTop
+// Project cards get focused
+projectCard = $(".personal-project-container");
+
 $(window).scroll(function(){
-    if ($(this).scrollTop() > 500) {
-        $(".personal-project-container").removeClass("unfocused-fog");
-    } else {
-        $(".personal-project-container").addClass("unfocused-fog");
-    }
+    let scrollBottom = $(window).scrollTop() + $(window).height(); // Assigning the scroll bottom
+
+    projectCard.each(function(){
+        let cardBottom = $(this).position().top + projectCard.outerHeight(true); // Finding the position of bottom of the div
+        if (scrollBottom >= cardBottom){
+            $(this).removeClass("unfocused-fog");
+            projectCard.not($(this)).addClass("unfocused-fog");
+        } else {  // If the Card is not completly visible on the view, add blur efect back
+            $(this).addClass("unfocused-fog")
+        }
+    })
 })
 
 
@@ -57,4 +65,3 @@ contactMediaText.forEach(item => {
 
 // Project item start to get focused on scroll
 let projectItem = document.querySelectorAll(".personal-project-container");
-
