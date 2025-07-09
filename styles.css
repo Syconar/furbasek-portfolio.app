@@ -120,13 +120,16 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body{
     background:var(--body-background);
     font-family: var(--body-ff);
     color: var(--main-fcolor);
+}
+
+html, body{
+    overflow-x: hidden;
 }
 
 .site{
@@ -170,6 +173,12 @@ body{
 @media screen and (max-width: 850px) {
     .main-container{
         text-align: start; /* Make navbar responsive */
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .main-container{
+        text-align: start; /* Create burger navbar */
     }
 }
 
@@ -314,7 +323,7 @@ body{
     margin-left: 20px;
 }
 
-@media screen and (max-width: 1168px) {
+@media screen and (max-width: 1222px) {
     .main-heading{
         text-align: start;
     }
