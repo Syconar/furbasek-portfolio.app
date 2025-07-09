@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=light_mode" />
     <script src="https://kit.fontawesome.com/e55d522acc.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="">
 <div class="site">
     <div id="gif-cursor">
         <img src="../img/monkey.gif" style="width: 75px;" alt="">
@@ -37,8 +37,8 @@
 
             <div class="nav-options">
                 <div class="nav-lang">
-                    <a href="en" class="active">CZE</a>
-                    <a href="cs">ENG</a>
+                    <a href="index.html" onclick="changeLanguage('cs')" class="active">CZE</a>
+                    <a href="index.html" onclick="changeLanguage('en')">ENG</a>
                 </div>
                 <div class="nav-mode">
                     <button class="nav-btn" id="nav-btn">
@@ -59,10 +59,10 @@
             <svg id="triangle-bg" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></svg>
             <div class="main-container">
                 <div class="main-heading">
-                    <h2>Hi, I'm Filip</h2>
-                    <h2>I'm front-end web developer.</h2>
+                    <h2 data-i18l="welcome_message_first">Hi, I'm Filip</h2>
+                    <h2 data-i18l="welcome_message_second">I'm front-end web developer.</h2>
                     <div class="next-section-port">
-                        <a href="#about">Read more about me <i class="fa-solid fa-arrow-turn-down"></i></i></a>
+                        <a href="#about" data-i18l="welcome_read_more">Read more about me <i class="fa-solid fa-arrow-turn-down"></i></i></a>
                     </div>
                 </div>
                 <div class="author-img">
@@ -177,10 +177,10 @@
                     </h2>
                     <div class="contact-media">
                         <div class="email media-url">
-                            <a href="#" target="_blank"><i class="fa-solid fa-square-envelope fa-lg"></i></a>
+                            <a href="mailto:urbasekfilip02@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope fa-lg"></i></a>
                         </div>
                         <div class="linkedin media-url">
-                            <a href="#" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/filip-urb%C3%A1sek-91356a207/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
                         </div>
                         <div class="facebook media-url">
                             <a href="https://www.facebook.com/filip.ur/?locale=cs_CZ" target="_blank"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
@@ -230,8 +230,9 @@
 </div>
 
     <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/cs-lang-data.json"></script>
+    <script src="../js/en-lang-data.json"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/lang-data.js"></script>
     <script src="../js/cursor.js"></script>
     <script src="../js/themes.js" defer></script>
 </body>

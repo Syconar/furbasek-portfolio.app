@@ -1,3 +1,5 @@
+
+
 // Navbar will hide when scrolling down
 const navbar = document.getElementById("navbar");
 let lastScrollY = window.scrollY;
@@ -27,9 +29,9 @@ $(window).scroll(function(){
             $(this).removeClass("unfocused-fog");
             projectCard.not($(this)).addClass("unfocused-fog");
         } else {  // If the Card is not completly visible on the view, add blur efect back
-            $(this).addClass("unfocused-fog")
+            $(this).addClass("unfocused-fog");
         }
-    })
+    });
 })
 
 
@@ -65,3 +67,10 @@ contactMediaText.forEach(item => {
 
 // Project item start to get focused on scroll
 let projectItem = document.querySelectorAll(".personal-project-container");
+
+
+
+// Email function
+function redirect(){
+    window.location.href = "mailto:urbasekfilip02@gmail.com"
+}
