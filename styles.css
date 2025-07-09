@@ -167,12 +167,22 @@ body{
     z-index: 999;
 }
 
+@media screen and (max-width: 850px) {
+    .main-container{
+        text-align: start; /* Make navbar responsive */
+    }
+}
+
 .navbar-hidden{
     transform: translateY(calc(-1 * 60px));
 }
 
 #navbar a{
     color: var(--main-fcolor);
+}
+
+.nav-title{
+    margin-left: 15px;
 }
 
 .nav-text ul{
@@ -234,7 +244,8 @@ body{
 }
 
 .nav-btn svg{
-    fill: var(--main-fcolor)
+    fill: var(--main-fcolor);
+    margin-right: 15px;
 }
 
 .nav-btn svg:last-child{
@@ -272,9 +283,18 @@ body{
     gap: 3vw;
 }
 
+@media screen and (max-width: 850px) {
+    .main-container{
+        width: 500px;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+}
+
 .author-img{ /* 351px x 482px */
     border: 5px solid var(--main-fcolor);
     border-radius: 25px;
+    margin-right: 50px;
     overflow: hidden;
     animation: shadowMove 4s linear infinite;
 }
@@ -291,6 +311,13 @@ body{
     text-align: center;
     line-height: var(--lineHeight-tall);
     font-size: var(--fontSizes-4xl);
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1168px) {
+    .main-heading{
+        text-align: start;
+    }
 }
 
 .next-section-port a{
@@ -334,13 +361,24 @@ body{
     display: flex;
     flex-direction: row;
     position: relative;
-    width: 100%;
     background: var(--projects-background);
     border-radius: 25px;
     overflow: hidden;
     border: 1px solid #ffffff23;
     box-shadow: 0 -20px 80px -20px #ffffff1f inset;
     transition: 0.28s;
+    margin: 0 15px;
+}
+
+@media screen and (max-width: 1404px){
+    
+}
+
+@media screen and (max-width: 1002px){
+    .personal-project-container{
+        flex-direction: column-reverse;
+        max-width: 600px;
+    }
 }
 
 .justify-content\:space-between{
@@ -402,6 +440,12 @@ body{
     gap: 15px;
 }
 
+@media screen and (max-width: 1002px){
+    .project-info{
+        margin: 3rem;
+    }
+}
+
 .align-items\:start{
     align-items: start;
 }
@@ -449,7 +493,7 @@ body{
     flex-direction: column;
     max-width: 1212px;
     color: var(--secondary-fcolor);
-    margin: 50px 0;
+    margin: 50px 20px;
 }
 
 .about-heading{
@@ -464,6 +508,12 @@ body{
     font-size: var(--fontSizes-2xl);
     margin-bottom: 2em;
     font-size: var(--fontSizes-5xl);
+}
+
+@media screen and (max-width: 714px) {
+    .about-heading{
+        font-size: var(--fontSizes-xl);
+    }
 }
 
 .about-paragraphs{
@@ -482,6 +532,18 @@ body{
     gap: 1.5rem;
 }
 
+@media screen and (max-width: 861px) {
+    .rightsideparagraph{
+        font-size: var(--fontSizes-xl);
+    }
+}
+
+@media screen and (max-width: 709px) {
+    .rightsideparagraph{
+        font-size: var(--fontSizes-l);
+    }
+}
+
 .leftsideparagraph{
     width: 30%;
     display: flex;
@@ -490,6 +552,18 @@ body{
     text-align: start;
     font-size: var(--fontSizes-l);
     color: var(--tertiary-fcolor);
+}
+
+@media screen and (max-width: 861px) {
+    .leftsideparagraph{
+        font-size: var(--fontSizes-m);
+    }
+}
+
+@media screen and (max-width: 709px) {
+    .leftsideparagraph{
+        font-size: var(--fontSizes-s);
+    }
 }
 
 .myTools{
@@ -552,6 +626,18 @@ body{
     font-size: 200px;
 }
 
+@media screen and (max-width: 830px) {
+    .heading-container{
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .heading-container{
+        font-size: 120px;
+    }
+}
+
 .contact-heading h1{
     letter-spacing: var(--letterSpacing-wider);
     font-weight: var(--fontWeight-arnold);
@@ -599,6 +685,20 @@ body{
     cursor: default;
 }
 
+@media screen and (max-width: 640px) {
+    .contact-info{
+        font-size: var(--fontSizes-xl);
+    }
+}
+
+.messageme{
+    margin-left: 15px;
+}
+
+.findme{
+    margin-right: 15px;
+}
+
 .media-text{
     display: flex;
     overflow: hidden;
@@ -622,6 +722,12 @@ body{
     flex-direction: row;
     margin-top: 8px;
     gap: 0.60vw;
+}
+
+@media screen and (max-width: 640px) {
+    .contact-media{
+        margin-top: 0;
+    }
 }
 
 .email a{
