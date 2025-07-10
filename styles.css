@@ -804,6 +804,18 @@ html, body{
     }
 }
 
+@media screen and (max-width: 530px) {
+    .heading-container{
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .heading-container{
+        font-size: 70px;
+    }
+}
+
 .contact-heading h1{
     letter-spacing: var(--letterSpacing-wider);
     font-weight: var(--fontWeight-arnold);
@@ -851,7 +863,17 @@ html, body{
     cursor: default;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 770px){
+    .contact-info{
+        max-width: 233px;
+        flex-direction: column;
+        align-items: start;
+        margin: 0 auto;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 707px) {
     .contact-info{
         font-size: var(--fontSizes-xl);
     }
@@ -859,6 +881,12 @@ html, body{
 
 .messageme{
     margin-left: 15px;
+}
+
+@media screen and (max-width: 770px){
+    .messageme{
+    margin-left: 0;
+}
 }
 
 .findme{
