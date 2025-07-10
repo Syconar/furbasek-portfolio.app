@@ -462,11 +462,6 @@ html, body{
     border-radius: 25px;
     margin-right: 50px;
     overflow: hidden;
-    animation: shadowMove 4s linear infinite;
-}
-
-@keyframes shadowMove{
-    50% {box-shadow: 10px 20px 1px var(--footer-fcolor);}
 }
 
 .main-heading{

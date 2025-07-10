@@ -16,8 +16,8 @@ window.addEventListener("scroll", () => {
 
 // if burger icon is checked, slide the nax-text back
 function burgerModal() {
-    let burgerIcon = document.getElementById("burger-input");
-    let navModal = document.getElementById("navText");
+    const burgerIcon = document.getElementById("burger-input");
+    const navModal = document.getElementById("navText");
 
     if(burgerIcon.checked === true) {
         navModal.classList.add("modal-back");
@@ -27,6 +27,17 @@ function burgerModal() {
         navModal.classList.add("small-screen");
     }
 }
+
+const burgerIcon = document.getElementById("burger-input");
+const navModal = document.getElementById("navText");
+
+document.addEventListener("click", e => {
+    if(!navModal.contains(e.target) && e.target !== burgerIcon) {
+        navModal.classList.remove("modal-back");
+        navModal.classList.add("small-screen");
+        burgerIcon.checked = false;
+    }
+}) 
 
 
 
