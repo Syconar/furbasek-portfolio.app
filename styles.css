@@ -531,8 +531,15 @@ html, body{
     flex-direction: column;
     gap: 75px;
     max-width: 1200px;
+    width: 100%;
     margin-top: 7em;
     margin-bottom: 50px;
+}
+
+@media screen and (max-width: 599px){
+    .all-projects-container{
+       justify-content: center;
+    }
 }
 
 .unfocused-fog{
@@ -554,14 +561,17 @@ html, body{
     margin: 0 15px;
 }
 
-@media screen and (max-width: 1404px){
-    
-}
-
-@media screen and (max-width: 1002px){
+@media screen and (max-width: 1003px){
     .personal-project-container{
         flex-direction: column-reverse;
         max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .personal-project-container{
+        margin: 0;
     }
 }
 
