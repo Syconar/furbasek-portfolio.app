@@ -1,42 +1,32 @@
 let monkeyGif = document.getElementById("gif-cursor");
-// Detect touch device
-function isTouchDevice(){ //try & catch to avoid any errors for touch screens
-    try{
-        document.createEvent("TouchEvent");
-        return true;
-    } catch (e) {
-        return false;
-    }
-};
 
-const touchMove = (e) => {
-    try{ //PageX and PageY return the position of client's cursor from top left of screen
-        var x = !isTouchDevice() ? e.pageX : e.touches [0].pageX;
-        var y = !isTouchDevice() ? e.pageY : e.touches [0].pageY;
-    }
-    catch(e) {}
-    //set left and top of div based on mouse position
-    monkeyGif.style.left = x + 10 + "px";
-    monkeyGif.style.top = y + 10 + "px";
-};
+let monkeyWidth = monkeyGif.offsetWidth;
+let monkeyHeight = monkeyGif.offsetHeight;
 
 let mouseX = 0, mouseY = 0;
 let gifX = 0, gifY = 0;
 
-// Update target position on mouse move
+function clamp(val, min, max) {
+    return Math.max(min, Math.min(max, val));
+}
+
 document.addEventListener("mousemove", (e) => {
-    mouseX = e.pageX + 10;
-    mouseY = e.pageY + 10;
+    // Calculate the max allowed position so the GIF stays inside the viewport
+    let maxX = window.innerWidth - monkeyWidth;
+    let maxY = window.innerHeight - monkeyHeight;
+    mouseX = clamp(e.clientX + 10, 0, maxX);
+    mouseY = clamp(e.clientY + 10, 0, maxY);
 });
 
-// Update target position on touch move
+// Update target on touch move
 document.addEventListener("touchmove", (e) => {
     if (e.touches && e.touches.length > 0) {
-        mouseX = e.touches[0].pageX + 10;
-        mouseY = e.touches[0].pageY + 10;
+        let maxX = window.innerWidth - monkeyWidth;
+        let maxY = window.innerHeight - monkeyHeight;
+        mouseX = clamp(e.touches[0].clientX + 10, 0, maxX);
+        mouseY = clamp(e.touches[0].clientY + 10, 0, maxY);
     }
 }, {passive: false});
-
 
 // Animation loop for smooth movement
 function animate() {
@@ -48,3 +38,9 @@ function animate() {
     requestAnimationFrame(animate);
 }
 animate();
+
+// Update monkeyWidth/monkeyHeight on resize
+window.addEventListener("resize", () => {
+    monkeyWidth = monkeyGif.offsetWidth;
+    monkeyHeight = monkeyGif.offsetHeight;
+});
