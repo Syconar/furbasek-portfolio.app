@@ -13,14 +13,16 @@
 
     "aboutMe_heading": "A little about me",
 
-    "aboutMe_rightsideparagraph1": "Well, hello there! My name is Filip Urbásek, I'm a 23-year-old front-end web developer <em style='font-weight: 100;'>(maybe also a web designer?)</em> from the Czech Republic, and I just LOVE coding. I use my deep-rooted passion and skills to build websites with love and care.",
-    "aboutMe_rightsideparagraph2": "I'm still learning new things, but I already love every part of this path I've chosen. These days, I'm mainly focused on learning JavaScript. Today's world is really fast, and you have to adapt accordingly, but I believe that quantity should not come at the expense of quality - especially in this field. So, even though I don't master a large number of programming languages yet, I make up for this with my ability and desire to constantly learn, improve, and put my heart into every single project for my clients.",
-    "aboutMe_rightsideparagraph3": "Right now, I'm working on some new, exciting projects that I can't wait to share with you. I'm always open to new collaborations and opportunities.",
+    "aboutMe_leftsideparagraph1": "Well, hello there! My name is Filip Urbásek, I'm a 23-year-old front-end web developer <em style='font-weight: 100;'>(maybe also a web designer?)</em> from the Czech Republic, and I just LOVE coding. I use my deep-rooted passion and skills to build websites with love and care.",
+    "aboutMe_leftsideparagraph2": "I'm still learning new things, but I already love every part of this path I've chosen. These days, I'm mainly focused on learning JavaScript. Today's world is really fast, and you have to adapt accordingly, but I believe that quantity should not come at the expense of quality - especially in this field. So, even though I don't master a large number of programming languages yet, I make up for this with my ability and desire to constantly learn, improve, and put my heart into every single project for my clients.",
+    "aboutMe_leftsideparagraph3": "Right now, I'm working on some new, exciting projects that I can't wait to share with you. I'm always open to new collaborations and opportunities.",
 
-    "aboutMe_leftsideparagraph1a": "Q: How long have you been programming?",
-    "aboutMe_leftsideparagraph1b": "<b>A:</b> At this time, it is five months of consistent work and learning. <em>(July 2025)</em>",
-    "aboutMe_leftsideparagraph2a": "Q: Why has your GitHub been so empty until recently?",
-    "aboutMe_leftsideparagraph2b": "<b>A:</b> You got me ✋😌🤚<br>The reason is that I was not fully aware of the functionality of GitHub at the beginning, so I did not add anything there. However, you can see the moment when I created an account, and between the times when my account was empty, I constantly filled it with various coding courses or several of my own projects from scratch.",
+    "aboutMe_rightsideparagraph1_header": "Frontend tools",
+
+    "aboutMe_rightsideparagraph2a": "Q: How long have you been programming?",
+    "aboutMe_rightsideparagraph2b": "<b>A:</b> At this time, it is five months of consistent work and learning. <em>(July 2025)</em>",
+    "aboutMe_rightsideparagraph3a": "Q: Why has your GitHub been so empty until recently?",
+    "aboutMe_rightsideparagraph3b": "<b>A:</b> You got me ✋😌🤚<br>The reason is that I was not fully aware of the functionality of GitHub at the beginning, so I did not add anything there. However, you can see the moment when I created an account, and between the times when my account was empty, I constantly filled it with various coding courses or several of my own projects from scratch.",
 
     "contact_heading1": "Let's",
     "contact_heading2": "Talk",
@@ -28,6 +30,6 @@
     "contact_messageme": "Message me",
     "contact_findme": "Find me",
 
-    "font_text1": "&copy; 2025 <a href='https://github.com/Syconar' target='_blank'>Filip Urbásek</a> || All rights reserved.",
+    "font_text1": "© 2025 Filip Urbásek || All rights reserved.",
     "font_text2": "Made with ❤️‍🔥 and JavaScript."
 }

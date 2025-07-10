@@ -700,7 +700,7 @@ html, body{
     gap: 50px;
 }
 
-.rightsideparagraph{
+.leftsideparagraph{
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -711,18 +711,18 @@ html, body{
 }
 
 @media screen and (max-width: 861px) {
-    .rightsideparagraph{
+    .leftsideparagraph{
         font-size: var(--fontSizes-xl);
     }
 }
 
 @media screen and (max-width: 709px) {
-    .rightsideparagraph{
+    .leftsideparagraph{
         font-size: var(--fontSizes-l);
     }
 }
 
-.leftsideparagraph{
+.rightsideparagraph{
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -733,13 +733,13 @@ html, body{
 }
 
 @media screen and (max-width: 861px) {
-    .leftsideparagraph{
+    .rightsideparagraph{
         font-size: var(--fontSizes-m);
     }
 }
 
 @media screen and (max-width: 709px) {
-    .leftsideparagraph{
+    .rightsideparagraph{
         font-size: var(--fontSizes-s);
     }
 }
