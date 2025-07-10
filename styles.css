@@ -236,9 +236,8 @@ html, body{
 @media screen and (max-width: 770px){
     .nav-text ul{
         flex-direction: column;
-        padding-left: 30px;
+        padding-left: 7rem;
         padding-top: 20px;
-        width: 40vw;
         height: 100vh;
     }
 
