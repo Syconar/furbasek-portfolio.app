@@ -337,24 +337,6 @@ html, body{
     }
 }
 
-/* @keyframes burgerDance {
-    0%{
-        transform: translateY(100%);
-    }
-    25%{
-        transform: translateY(-100%);
-    }
-    50%{
-        transform: translateY(100%);
-    }
-    75%{
-        transform: translateY(200%);
-    }
-    100%{
-        transform: translateY(100%);
-    }
-} */
-
 .nav-options{
     display: flex;
     flex-direction: row;
@@ -395,7 +377,7 @@ html, body{
     width: 100%;
 }
 
-.nav-lang a:last-child{
+.nav-lang a.hidden{
     display: none;
 }
 

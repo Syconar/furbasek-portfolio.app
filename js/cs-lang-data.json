@@ -1,0 +1,33 @@
+{
+    "navbar_resume": "Životopis",
+    "navbar_projects": "Projekty",
+    "navbar_about": "O mně",
+    "navbar_contact": "Kontakt",
+
+    "welcome_message_first": "Zdravím, jsem Filip",
+    "welcome_message_second": "Jsem front-end web developer.",
+    "welcome_read_more": "Přečtěte si o mě více",
+
+    "snowFox_paragraph": "My personal website is full of my own homemade recipes. For a long time, I was limited to writing down my recipes in a notepad on my mobile phone. I decided that now would be a great opportunity to simplify this integral part of my life, so I created a personal recipe page where I can add more recipes at will and access any recipe I need at any time without any problems.",
+    "technicalDocumentation_paragraph": "Technical documentation is a web page that provides technical information and an introduction to HTML and CSS. It was built as a certification project of FreeCodeCamp.",
+    
+    "aboutMe_heading": "Trochu o mně",
+
+    "aboutMe_rightsideparagraph1": "Well, hello there! My name is Filip Urbásek, I'm a 23-year-old front-end web developer <em style='font-weight: 100;'>(maybe also a web designer?)</em> from the Czech Republic, and I just LOVE coding. I use my deep-rooted passion and skills to build websites with love and care.",
+    "aboutMe_rightsideparagraph2": "I'm still learning new things, but I already love every part of this path I've chosen. These days, I'm mainly focused on learning JavaScript. Today's world is really fast, and you have to adapt accordingly, but I believe that quantity should not come at the expense of quality - especially in this field. So, even though I don't master a large number of programming languages yet, I make up for this with my ability and desire to constantly learn, improve, and put my heart into every single project for my clients.",
+    "aboutMe_rightsideparagraph3": "Right now, I'm working on some new, exciting projects that I can't wait to share with you. I'm always open to new collaborations and opportunities.",
+
+    "aboutMe_leftsideparagraph1a": "Q: Jak dlouho již programuješ?",
+    "aboutMe_leftsideparagraph1b": "<b>A:</b> V tento moment je tomu pět měsíců konzistentní práce a vzdělávání se. <em>(Červenec 2025)</em>",
+    "aboutMe_leftsideparagraph2a": "Q: Proč je tvůj GitHub až do nedávna tak prázdný?",
+    "aboutMe_leftsideparagraph2b": "<b>A:</b> Dostali jste mě ✋😌🤚<br>Důvodem je, že jsem si na začátku nebyl zcela vědom funkcí GitHubu, proto jsem tam nic nepřidával. Nicméně, lze vidět okamžik, kdy jsem si založil účet a dobu, kdy byl můj tamní účet neaktivní jsem pravidelně trávil kódováním různých kurzů nebo vytváření několika mých vlastních projektů.",
+
+    "contact_heading1": "Let's",
+    "contact_heading2": "Talk",
+
+    "contact_messageme": "Napište mi",
+    "contact_findme": "Najděte mě",
+
+    "font_text1": "&copy; 2025 <a href='https://github.com/Syconar' target='_blank'>Filip Urbásek</a> || Všechna práva vyhrazena.",
+    "font_text2": "Vytvořeno s ❤️‍🔥 a JavaScriptem."
+}

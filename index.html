@@ -28,10 +28,10 @@
 
             <div class="nav-text small-screen" id="navText">
                 <ul>
-                    <li><a href="https://github.com/Syconar" target="_blank">Resume</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://github.com/Syconar" target="_blank" data-i18l="navbar_resume">Resume</a></li>
+                    <li><a href="#projects" data-i18l="navbar_projects">Projects</a></li>
+                    <li><a href="#about" data-i18l="navbar_about">About</a></li>
+                    <li><a href="#contact" data-i18l="navbar_contact">Contact</a></li>
                 </ul>
             </div>
         
@@ -41,8 +41,8 @@
 
             <div class="nav-options">
                 <div class="nav-lang">
-                    <a href="index.html" onclick="changeLanguage('cs')" class="active">CZE</a>
-                    <a href="index.html" onclick="changeLanguage('en')">ENG</a>
+                    <a href="#" onclick=" return changeLanguage('cs')">CZE</a>
+                    <a href="#" onclick="return changeLanguage('en')" class="hidden">ENG</a>
                 </div>
                 <div class="nav-mode">
                     <button class="nav-btn" id="nav-btn">
@@ -64,7 +64,7 @@
             <div class="main-container">
                 <div class="main-heading">
                     <h2 data-i18l="welcome_message_first">Hi, I'm Filip</h2>
-                    <h2 data-i18l="welcome_message_second">I'm front-end web developer.</h2>
+                    <h2 data-i18l="welcome_message_second">I'm a front-end web developer.</h2>
                     <div class="next-section-port">
                         <a href="#about" data-i18l="welcome_read_more">Read more about me <i class="fa-solid fa-arrow-turn-down"></i></i></a>
                     </div>
@@ -90,7 +90,7 @@
                     <img src="img/snow-fox-personal-recipe-website.jpg" alt="">
                     <div class="project-info ml-3 align-items:start">
                         <h2>Snow Fox</h2>
-                        <p>My personal website is full of my own homemade recipes. For a long time, I was limited to writing down my recipes in a notepad on my mobile phone. I decided that now would be a great opportunity to simplify this integral part of my life, so I created a personal recipe page where I can add more recipes at will and click on any recipe I need at any time without any problems.</p>
+                        <p data-i18l="snowFox_paragraph">My personal website is full of my own homemade recipes. For a long time, I was limited to writing down my recipes in a notepad on my mobile phone. I decided that now would be a great opportunity to simplify this integral part of my life, so I created a personal recipe page where I can add more recipes at will and access any recipe I need at any time without any problems.</p>
                         <div class="project-programs">
                             <h2>HTML</h2>
                             <h2>CSS</h2>
@@ -108,7 +108,7 @@
 
                     <div class="project-info ml-3 align-items:start">
                         <h2>Technical documentation</h2>
-                        <p>Technical documentation is a web page that provides technical information and an introduction to HTML and CSS. Built for a certification project of FreeCodeCamp.</p>
+                        <p data-i18l="technicalDocumentation_paragraph">Technical documentation is a web page that provides technical information and an introduction to HTML and CSS. It was built as a certification project of FreeCodeCamp.</p>
                         <div class="project-programs">
                             <h2>HTML</h2>
                             <h2>CSS</h2>
@@ -127,14 +127,14 @@
          <section id="about">
             <div class="inside-info-container">
                 <div class="about-heading">
-                    <h2>Some quick info about me</h2>
+                    <h2 data-i18l="aboutMe_heading">A little about me</h2>
                 </div>
 
                     <div class="about-paragraphs">
                         <div class="rightsideparagraph">
-                            <p>Well, hello there! My name is Filip Urbásek, I'm a 23-year-old front-end web developer <em style="font-weight: 100;">(also a web designer?)</em> from the Czech Republic, and I just LOVE coding. I use my deep-rooted passion and skills to build websites with love and care.</p>
-                            <p>I'm still learning new things, but I already love every part of this path I have chosen. These days, I'm mainly focused on learning JavaScript. Today's world is really fast, and you have to adapt accordingly, but I believe that quantity should not come at the expense of quality, especially in this field. Therefore, even though I don't master a large number of programming languages at the moment, I make up for this with my ability and desire to constantly learn, improve, and put my heart into every single project for my clients.</p>
-                            <p>Right now, I'm working on some new, exciting projects that I can't wait to share with you. But I'm always open to new collaborations and opportunities.</p>
+                            <p data-i18l="aboutMe_rightsideparagraph1">Well, hello there! My name is Filip Urbásek, I'm a 23-year-old front-end web developer <em style="font-weight: 100;">(maybe also a web designer?)</em> from the Czech Republic, and I just LOVE coding. I use my deep-rooted passion and skills to build websites with love and care.</p>
+                            <p data-i18l="aboutMe_rightsideparagraph2">I'm still learning new things, but I already love every part of this path I've chosen. These days, I'm mainly focused on learning JavaScript. Today's world is really fast, and you have to adapt accordingly, but I believe that quantity should not come at the expense of quality - especially in this field. So, even though I don't master a large number of programming languages yet, I make up for this with my ability and desire to constantly learn, improve, and put my heart into every single project for my clients.</p>
+                            <p data-i18l="aboutMe_rightsideparagraph3">Right now, I'm working on some new, exciting projects that I can't wait to share with you. I'm always open to new collaborations and opportunities.</p>
                         </div>
 
                         <div class="leftsideparagraph">
@@ -143,10 +143,10 @@
                                 <p>HTML5, CSS3, JavaScript, React, Git/GitHub, Next.js</p>
                             </div>
                             <div class="questionsAndAnswers">
-                                <p class="pQuestion">Q: How long have you been programming?</p>
-                                <p><b>A:</b> At this time, it is five months of constitutional work and learning. <em>(July 2025)</em></p>
-                                <p class="pQuestion">Q: Why has your GitHub been so empty until recently?</p>
-                                <p><b>A:</b> You got me ✋😌🤚<br>The reason is that I was not fully aware of the functionality of GitHub at the beginning, so I did not add anything there. However, you can see the moment when I created an account, and between the times when my account was empty, I constantly filled it with various coding courses or several of my own projects from scratch.</p>
+                                <p class="pQuestion" data-i18l="aboutMe_leftsideparagraph1a">Q: How long have you been programming?</p>
+                                <p data-i18l="aboutMe_leftsideparagraph1b"b><b>A:</b> At this time, it is five months of consistent work and learning. <em>(July 2025)</em></p>
+                                <p class="pQuestion" data-i18l="aboutMe_leftsideparagraph2a">Q: Why has your GitHub been so empty until recently?</p>
+                                <p data-i18l="aboutMe_leftsideparagraph2b"><b>A:</b> You got me ✋😌🤚<br>The reason is that I was not fully aware of the functionality of GitHub at the beginning, so I did not add anything there. However, you can see the moment when I created an account, and between the times when my account was empty, I constantly filled it with various coding courses or several of my own projects from scratch.</p>
                             </div>
                         </div>
                 </div>
@@ -164,10 +164,10 @@
                     <h1 aria-label="Let's Talk" role="heading">
                             <div class="heading-container">
                                 <div class="contact-heading-part">
-                                    <span class="contact-heading-part-info first">Let's</span>
+                                    <span class="contact-heading-part-info first" data-i18l="contact_heading1">Let's</span>
                                 </div>
                                 <div class="contact-heading-part">
-                                    <span class="contact-heading-part-info">Talk</span>
+                                    <span class="contact-heading-part-info" data-i18l="contact_heading2">Talk</span>
                                 </div>
                             </div>
                     </h1>
@@ -177,7 +177,7 @@
             <div class="contact-info">
                 <div class="messageme">
                     <h2 aria-label="Message me" role="heading" class="media-text">
-                        <span class="messageme-heading">Message me</span>
+                        <span class="messageme-heading" data-i18l="contact_messageme">Message me</span>
                     </h2>
                     <div class="contact-media">
                         <div class="email media-url">
@@ -194,7 +194,7 @@
 
                 <div class="findme">
                     <h2 aria-label="Find me" role="heading" class="media-text">
-                        <span class="findme-heading">Find me</span>
+                        <span class="findme-heading" data-i18l="contact_findme">Find me</span>
                     </h2>
                     <div class="contact-media">
                         <div class="instagram media-url">
@@ -214,7 +214,7 @@
     <footer>
 
         <div class="footer-text">
-            <p style="font-style: italic;">&copy; 
+            <p style="font-style: italic;" data-i18l="font_text1">&copy; 
                 <!-- -->
                 2025 
                 <!-- -->
@@ -224,8 +224,8 @@
                 <!-- -->
                  All rights reserved.
             </p>
-            <p>
-                Made with ❤️‍🔥 and Javascript.
+            <p data-i18l="font_text2">
+                Made with ❤️‍🔥 and JavaScript.
             </p>
         </div>
         
@@ -234,8 +234,6 @@
 </div>
 
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/cs-lang-data.json"></script>
-    <script src="js/en-lang-data.json"></script>
     <script src="js/script.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/themes.js" defer></script>
