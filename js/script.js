@@ -32,14 +32,21 @@ const burgerIcon = document.getElementById("burger-input");
 const navMode = document.getElementById("burger-mode");
 const navModal = document.getElementById("navText");
 const navBtn = document.getElementById("nav-btn");
+
 // Close the nav modal, if user click anywhere outside of the modal element
 document.addEventListener("click", e => { 
-    if(!navModal.contains(e.target) && e.target !== burgerIcon && e.target !== navBtn) {
+    // Don't close if click is inside navModal, or on burgerIcon, or on navBtn or its children
+    if(
+        !navModal.contains(e.target) && 
+        e.target !== burgerIcon && 
+        e.target !== navBtn &&
+        !navBtn.contains(e.target)
+    ) {
         navModal.classList.remove("modal-back");
         navModal.classList.add("small-screen");
         burgerIcon.checked = false;
     }
-}) 
+});
 
 
 
@@ -50,32 +57,44 @@ projectCard = $(".personal-project-container");
 $(window).scroll(function(){ // Focus on computers, laptops, tablets
     let scrollBottom = $(window).scrollTop() + $(window).height(); // Assigning the scroll bottom
 
-    projectCard.each(function(){
-        let cardBottom = $(this).position().top + projectCard.outerHeight(true); // Finding the position of bottom of the div
-        if (scrollBottom >= cardBottom && screen.width > 1003){
-            $(this).removeClass("unfocused-fog");
-            projectCard.not($(this)).addClass("unfocused-fog");
-        } else {  // If the Card is not completly visible on the view, add blur efect back
-            $(this).addClass("unfocused-fog");
-        }
-    });
-})
+    if (window.innerWidth > 1003) {
+        // Large screens: focus card whose bottom is above scrollBottom
+        let closestCard = null;
+        let closestDistance = Infinity;
 
-$(window).scroll(function(){ //Focus on smaller size tablets and mobiles
-    let scrollBottom = $(window).scrollTop() + $(window).height(); // Assigning the scroll bottom
+        projectCard.each(function() {
+            let cardBottom = $(this).offset().top + $(this).outerHeight(true); // Finding the position of bottom of the div
+            let distance = Math.abs(scrollBottom - cardBottom);
+            if (distance < closestDistance && scrollBottom >= $(this).offset().top) {
+                closestDistance = distance;
+                closestCard = $(this);
+            }
+        });
 
-    projectCard.each(function(){
-        let cardTop = $(this).position().top;
-        if (scrollBottom >= cardTop && screen.width <= 1003){
-            $(this).removeClass("unfocused-fog");
-            projectCard.not($(this)).addClass("unfocused-fog");
-        } else {
-            $(this).addClass("unfocused-fog");
+        projectCard.addClass("unfocused-fog");
+        if (closestCard) {
+            closestCard.removeClass("unfocused-fog");
         }
-    })
+    } else {
+        // Small screens: focus card whose top is above scrollBottom
+        let closestCard = null;
+        let closestDistance = Infinity;
+
+        projectCard.each(function() {
+            let cardTop = $(this).offset().top;
+            let distance = Math.abs(scrollBottom - cardTop);
+            if (distance < closestDistance && scrollBottom >= cardTop) {
+                closestDistance = distance;
+                closestCard = $(this);
+            }
+        });
+
+        projectCard.addClass("unfocused-fog");
+        if (closestCard) {
+            closestCard.removeClass("unfocused-fog");
+        }
+    }
 });
-
-
 
 // Contact title and social media sliding up on scroll
 let contactMainHeading = document.querySelectorAll(".contact-heading-part");
