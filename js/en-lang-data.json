@@ -30,6 +30,6 @@
     "contact_messageme": "Message me",
     "contact_findme": "Find me",
 
-    "font_text1": "© 2025 Filip Urbásek || All rights reserved.",
+    "font_text1": "© 2025 <a href='https://github.com/Syconar' target='_blank'>Filip Urbásek</a> || All rights reserved.",
     "font_text2": "Made with ❤️‍🔥 and JavaScript."
 }

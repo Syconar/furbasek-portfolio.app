@@ -44,7 +44,7 @@ function setLanguage(lang) {
         document.querySelectorAll("[data-i18l]").forEach(el => {
             let key = el.getAttribute("data-i18l");
             if (data[key]) {
-                el.textContent = data[key];
+                el.innerHTML = data[key]; //Using this, the tags and anchors will be rendered correctly
             }
         });
     });
