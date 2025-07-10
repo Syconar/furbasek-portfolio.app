@@ -1,19 +1,33 @@
-
-
 // Navbar will hide when scrolling down
 const navbar = document.getElementById("navbar");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-    if (lastScrollY < window.scrollY) {
+    if (lastScrollY < window.scrollY && screen.width >= 770) {
         navbar.classList.add("navbar-hidden");
     } else {
         navbar.classList.remove("navbar-hidden");
     }
-    
 
     lastScrollY = window.scrollY
 });
+
+
+
+// if burger icon is checked, slide the nax-text back
+function burgerModal() {
+    let burgerIcon = document.getElementById("burger-input");
+    let navModal = document.getElementById("navText");
+
+    if(burgerIcon.checked === true) {
+        navModal.classList.add("modal-back");
+        navModal.classList.remove("small-screen");
+    } else {
+        navModal.classList.remove("modal-back");
+        navModal.classList.add("small-screen");
+    }
+}
+
 
 
 
