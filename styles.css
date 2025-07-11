@@ -297,8 +297,8 @@ label.burger-icon:has(input:checked){
 }
 
 .burger-icon input{
-    width: 35px;
-    height: 35px;
+    width: 100%;
+    height: 100%;
     appearance: none;
     padding: 0;
     margin: 0;
@@ -649,6 +649,18 @@ label.burger-icon:has(input:checked){
     height: 30px;
     position: absolute;
     gap: 1.3rem;
+}
+
+.project-links.numberEven{
+    top: 2.5em;
+}
+
+@media screen and (max-width: 1002px){
+    .project-links.numberEven{
+        top: auto;
+        bottom: 4em;
+        right: 10em;
+    }
 }
 
 .left-3{
