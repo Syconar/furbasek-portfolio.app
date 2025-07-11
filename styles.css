@@ -445,7 +445,7 @@ html, body{
 @media screen and (max-width: 375px) {
     .main-container{
         max-width: 280px;
-        margin-top: 45px;
+        margin-top: 20px;
     }
 }
 
@@ -466,13 +466,20 @@ html, body{
 
 @media screen and (max-width: 850px) {
     .author-img{
-        margin: 0 auto;
+        margin: 0 auto; 
     }
 }
 
 @media screen and (max-width: 375px) {
     .author-img{
         margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 289px) {
+    .author-img{
+        width: 85%;
     }
 }
 
@@ -497,20 +504,31 @@ html, body{
         text-align: start;
         justify-content: center;
         font-size: var(--fontSizes-2xl);
-        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 375px) {
     .main-heading{
-        font-size: var(--fontSizes-l);
+        font-size: var(--fontSizes-m);
     }
 }
 
 @media screen and (max-width: 289px) {
     .main-heading{
-        font-size: var(--fontSizes-m);
-        margin-left: 15px;
+        font-size: var(--fontSizes-s);
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 247px) {
+    .main-heading{
+        margin-left: 1.5em;
+    }
+}
+
+@media screen and (max-width: 199px) {
+    .main-heading{
+        margin-left: 1em;
     }
 }
 
@@ -524,6 +542,12 @@ html, body{
 
 .next-section-port a:last-child{
     background: none;
+}
+
+@media screen and (max-width: 375px) {
+    .next-section-port a{
+        font-size: var(--fontSizes-m);
+    }
 }
 /* */
 
