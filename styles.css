@@ -263,9 +263,23 @@ html, body{
     }
 }
 
+label.burger-icon:has(input:checked){
+    display: flex;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-right: 5px;
+
+}
+
 .burger-icon{
     display: flex;
-    width: 100%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
     flex-direction: column;
     gap: var(--burger-gap);
     position: absolute;
@@ -283,6 +297,8 @@ html, body{
 }
 
 .burger-icon input{
+    width: 35px;
+    height: 35px;
     appearance: none;
     padding: 0;
     margin: 0;
