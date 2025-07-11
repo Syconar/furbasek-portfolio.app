@@ -265,7 +265,7 @@ html, body{
 
 .burger-icon{
     display: flex;
-    width: 35px;
+    width: 100%;
     flex-direction: column;
     gap: var(--burger-gap);
     position: absolute;
@@ -466,6 +466,7 @@ html, body{
 
 @media screen and (max-width: 850px) {
     .author-img{
+        width: 85%;
         margin: 0 auto; 
     }
 }
@@ -473,7 +474,6 @@ html, body{
 @media screen and (max-width: 375px) {
     .author-img{
         margin: 0 auto;
-        width: 90%;
     }
 }
 
@@ -504,6 +504,12 @@ html, body{
         text-align: start;
         justify-content: center;
         font-size: var(--fontSizes-2xl);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main-heading{
+        font-size: var(--fontSizes-m);
     }
 }
 
