@@ -780,6 +780,13 @@ label.burger-icon:has(input:checked){
         grid-auto-rows: auto;
         gap: 1rem;
     }
+
+    .project-programs.numberOdd{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        gap: 1rem;
+    }
 }
 
 .project-programs h2{
