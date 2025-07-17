@@ -618,6 +618,14 @@ label.burger-icon:has(input:checked){
     cursor: default;
 }
 
+@media screen and (max-width: 1003px){
+    .persistent-unfocused-fog{
+        flex-direction: column-reverse;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
 .coming-soon-header{
     position: absolute;
     left: 50%;
@@ -653,6 +661,7 @@ label.burger-icon:has(input:checked){
 }
 
 @media screen and (max-width: 1003px){
+    .next-personal-project-container,
     .personal-project-container{
         flex-direction: column-reverse;
         max-width: 600px;
@@ -661,6 +670,7 @@ label.burger-icon:has(input:checked){
 }
 
 @media screen and (max-width: 599px){
+    .next-personal-project-container,
     .personal-project-container{
         margin: 0;
     }
@@ -687,7 +697,7 @@ label.burger-icon:has(input:checked){
     top: 2.5em;
 }
 
-@media screen and (max-width: 1002px){
+@media screen and (max-width: 1003px){
     .project-links.numberEven{
         top: auto;
         bottom: 4em;
@@ -737,7 +747,7 @@ label.burger-icon:has(input:checked){
     gap: 15px;
 }
 
-@media screen and (max-width: 1002px){
+@media screen and (max-width: 1003px){
     .project-info{
         margin: 3rem;
     }
@@ -761,6 +771,15 @@ label.burger-icon:has(input:checked){
     flex-direction: row;
     margin-top: 2.5rem;
     gap: 1rem;
+}
+
+@media screen and (max-width: 1003px){
+    .project-programs.numberEven{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 1rem;
+    }
 }
 
 .project-programs h2{
