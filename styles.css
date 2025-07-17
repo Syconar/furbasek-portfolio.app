@@ -608,12 +608,37 @@ label.burger-icon:has(input:checked){
     }
 }
 
+.persistent-unfocused-fog{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    filter: blur(10px) brightness(30%);
+    background: #1a1a1a;
+    border: 1px solid #ffffff23;
+    cursor: default;
+}
+
+.coming-soon-header{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--fontSizes-2xl);
+    z-index: 50;
+}
+
 .unfocused-fog{
     filter: blur(3px) brightness(80%);
     transform: scale(0.95);
     cursor: default;
 }
 
+.next-personal-project-container{
+    transform: scale(0.95);
+    border: none !important;
+}
+
+.next-personal-project-container,
 .personal-project-container{
     display: flex;
     flex-direction: row;
