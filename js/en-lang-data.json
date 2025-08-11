@@ -16,8 +16,10 @@
     "aboutMe_heading": "A little about me",
 
     "aboutMe_leftsideparagraph1": "Well, hello there! My name is Filip Urbásek, I'm a 23-year-old front-end web developer <em style='font-weight: 100;'>(maybe also a web designer?)</em> from the Czech Republic, and I just LOVE coding. I use my deep-rooted passion and skills to build websites with love and care.",
-    "aboutMe_leftsideparagraph2": "I'm still learning new things, but I already love every part of this path I've chosen. These days, I'm mainly focused on learning JavaScript. Today's world is really fast, and you have to adapt accordingly, but I believe that quantity should not come at the expense of quality - especially in this field. So, even though I don't master a large number of programming languages yet, I make up for this with my ability and desire to constantly learn, improve, and put my heart into every single project for my clients.",
-    "aboutMe_leftsideparagraph3": "Right now, I'm working on some new, exciting projects that I can't wait to share with you. I'm always open to new collaborations and opportunities.",
+    "aboutMe_leftsideparagraph2": "I'm still learning new things, but I already love every part of this path I've chosen. These days, I'm mainly focused on learning JavaScript. Today's world is really fast, and you have to adapt accordingly, but I believe that quantity should not come at the expense of quality, especially in this field.",
+    "aboutMe_leftsideparagraph3": "So, even though I don't master a large number of programming languages yet, I make up for this with my ability and desire to constantly learn, improve, and put my heart into every single project for my clients.",
+    "aboutMe_leftsideparagraph4": "Right now, I'm working on some new, exciting projects that I can't wait to share with you.",
+    "aboutMe_leftsideparagraph5": "I'm always open to new collaborations and opportunities.",
 
     "aboutMe_rightsideparagraph1_header": "Frontend tools",
 
